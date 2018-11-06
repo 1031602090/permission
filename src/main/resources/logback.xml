@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--scan表示是否监听配置文件,为true且配置文件发生变化时会重新读取配置文件-->
+<!--scanPeriod扫描配置文件时间间隔，默认单位毫秒，可使用seconds，hours，minutes等单位-->
+<configuration scan="true" scanPeriod="60 seconds">
+    <!--每个appender定义一种输出格式-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}{$thread}</pattern>
+        </encoder>
+    </appender>
+    <appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.home}/log/permission.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FilterNamePattern>${catalina.home}/log/permission%d{yyyy-MM-dd}.log.gz/</FilterNamePattern>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}{$thread}</pattern>
+        </layout>
+    </appender>
+    <!--定义logger名称，一般一个logger对应一个appender-->
+    <!--<logger name="" level="INFO">
+        <appender-ref ref="permission"/>
+    </logger>-->
+    <!--用于指定appender使用那种级别输出日志,只能存在一个root-->
+    <!--级别 trace<debug<info<warning<error-->
+    <!--通常为info，此时trace级debug不会输出-->
+    <root>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

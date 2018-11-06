@@ -11,7 +11,7 @@
         </property>
     </bean>
     <!--数据库相关-->
-    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource">
+    <bean id="datasource" name="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${db.driverClassName}"/>
         <property name="url" value="${db.url}"/>
         <property name="username" value="${db.username}"/>
@@ -47,4 +47,6 @@
     <bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter">
         <property name="dbType" value="mysql"/>
     </bean>
+    <
+
 </beans>
