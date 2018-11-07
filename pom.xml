@@ -102,6 +102,12 @@
           <artifactId>jackson-datatype-guava</artifactId>
           <version>2.5.3</version>
       </dependency>
+      <!--utils-->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>common-lang3</artifactId>
+          <version>RELEASE</version>
+      </dependency>
   </dependencies>
 
   <build>
