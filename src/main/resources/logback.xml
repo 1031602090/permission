@@ -8,15 +8,22 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}{$thread}</pattern>
         </encoder>
     </appender>
-    <appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${catalina.home}/log/permission.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FilterNamePattern>${catalina.home}/log/permission%d{yyyy-MM-dd}.log.gz/</FilterNamePattern>
-        </rollingPolicy>
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}{$thread}</pattern>
-        </layout>
-    </appender>
+    <!--<appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+            <!--&lt;!&ndash;输出INFO级别及以上日志&ndash;&gt;-->
+            <!--<level>INFO</level>-->
+        <!--</filter>-->
+        <!--<encoder>-->
+            <!--<pattern>-->
+                <!--%d %class %level %msg %n-->
+            <!--</pattern>-->
+        <!--</encoder>-->
+        <!--&lt;!&ndash;&lt配置滚动策略&ndash;&gt;-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--<fileNamePattern>${catalina.home}/log/permission%d{yyyy-MM-dd}.log.gz/</fileNamePattern>-->
+        <!--</rollingPolicy>-->
+    <!--</appender>-->
+
     <!--定义logger名称，一般一个logger对应一个appender-->
     <!--<logger name="" level="INFO">
         <appender-ref ref="permission"/>
