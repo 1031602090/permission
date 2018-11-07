@@ -1,7 +1,7 @@
 package com.hang.dao;
 
-import com.hang.model.SysLog;
-import com.hang.model.SysLogWithBLOBs;
+import com.hang.model.*;
+
 
 public interface SysLogMapper {
     int deleteByPrimaryKey(Integer id);

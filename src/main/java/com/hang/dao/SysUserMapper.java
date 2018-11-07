@@ -1,6 +1,6 @@
 package com.hang.dao;
 
-import com.hang.model.SysUser;
+import com.hang.model.*;
 
 public interface SysUserMapper {
     int deleteByPrimaryKey(Integer id);

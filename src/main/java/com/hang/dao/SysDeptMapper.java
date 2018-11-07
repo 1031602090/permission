@@ -1,6 +1,6 @@
 package com.hang.dao;
 
-import com.hang.model.SysDept;
+import com.hang.model.*;
 
 public interface SysDeptMapper {
     int deleteByPrimaryKey(Integer id);

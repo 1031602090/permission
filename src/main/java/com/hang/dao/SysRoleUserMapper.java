@@ -1,6 +1,6 @@
 package com.hang.dao;
 
-import com.hang.model.SysRoleUser;
+import com.hang.model.*;
 
 public interface SysRoleUserMapper {
     int deleteByPrimaryKey(Integer id);

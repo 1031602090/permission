@@ -1,6 +1,6 @@
 package com.hang.dao;
 
-import com.hang.model.SysAclModule;
+import com.hang.model.*;
 
 public interface SysAclModuleMapper {
     int deleteByPrimaryKey(Integer id);
