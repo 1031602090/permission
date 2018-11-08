@@ -4,8 +4,12 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * @author hang
+ */
 @Data
 public class SysAcl {
+
     private Integer id;
 
     private String code;

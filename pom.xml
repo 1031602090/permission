@@ -105,8 +105,21 @@
       <!--utils-->
       <dependency>
           <groupId>org.apache.commons</groupId>
-          <artifactId>common-lang3</artifactId>
-          <version>RELEASE</version>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.4</version>
+      </dependency>
+
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+          <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>jsp-api</artifactId>
+          <version>6.0.53</version>
       </dependency>
   </dependencies>
 
