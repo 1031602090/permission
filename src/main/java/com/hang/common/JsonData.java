@@ -44,25 +44,29 @@ public class JsonData {
 
     public static JsonData fail() {
         JsonData jsonData = new JsonData();
-        jsonData.setRet(true);
+        jsonData.setRet(false);
         return jsonData;
     }
 
     public static JsonData fail(String msg){
         JsonData jsonData = new JsonData();
-        jsonData.setRet(true);
+        jsonData.setRet(false);
+        jsonData.setMsg(msg);
         return jsonData;
     }
 
     public static JsonData fail(Object data){
         JsonData jsonData = new JsonData();
-        jsonData.setRet(true);
+        jsonData.setRet(false);
+        jsonData.setData(data);
         return jsonData;
     }
 
     public static JsonData fail(String msg,Object data){
         JsonData jsonData = new JsonData();
-        jsonData.setRet(true);
+        jsonData.setRet(false);
+        jsonData.setData(data);
+        jsonData.setMsg(msg);
         return jsonData;
     }
 
